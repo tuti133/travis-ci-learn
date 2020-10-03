@@ -6,10 +6,7 @@ before_install:
 script:
     - npm run test
 before_deploy: 
-    - script: "run dev"
+    script: "run dev"
     on:
         branch: develope
-    - script: "run main"
-    on:
-        branch: main
 deploy:
