@@ -5,3 +5,9 @@ before_install:
     - npm install
 script:
     - npm run test
+
+deploy:
+    provider: script
+    script: bash scripts/deploy.sh
+    on:
+        branch: develope
