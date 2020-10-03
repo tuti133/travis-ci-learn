@@ -5,7 +5,9 @@ before_install:
     - npm install
 script:
     - npm run test
-if: branch = develope
-before_deploy: 
-    echo "run dev"
+
 deploy:
+    provider: script
+    script: bash scripts/deploy.sh
+    on:
+        branch: develope
