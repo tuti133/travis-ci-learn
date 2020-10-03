@@ -5,4 +5,14 @@ before_install:
     - npm install
 script:
     - npm run test
-
+deploy:
+    # deploy develop to the staging environment
+    - provider: script
+        script: echo "deloy dev"
+        on:
+            branch: develope
+    # deploy master to production
+    - provider: script
+        script: echo "deloy master"
+        on:
+            branch: main
